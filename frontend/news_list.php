@@ -19,7 +19,7 @@ $totalRows = count($all_news);
 		<div id="body">
 			<div class="header">
 				<div>
-					<h1>最新消息</h1>
+					<h1>Blog</h1>
 				</div>
 			</div>
 			<div class="blog">
@@ -31,12 +31,22 @@ $totalRows = count($all_news);
 							<div>
 								<h1><?php echo $row['title']; ?></h1>
 								<span><?php echo $row['published_date']; ?></span>
-								<p><?php echo mb_substr($row['content'],0,50,"utf-8")."...";  ?></p>
-								<a href="news.php?newsID=<?php echo $row['newsID'];?>" class="more">Read More</a>
+								<p><?php echo mb_substr($row['content'],0,50,'utf-8'); ?></p>
+								<a href="news.php?newsID=<?php echo $row['newsID']; ?>" class="more">Read More</a>
 							</div>
 						</li>
-					<?php } ?>
-
+						<?php } ?>
+						<li>
+							<img src="../images/berries.png" alt="">
+							<div>
+								<h1>BERRIES ON THE GROVE</h1>
+								<span>By Admin on November 28, 2023</span>
+								<p>You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template.</p>
+								<a href="news.php" class="more">Read More</a>
+							</div>
+						</li>
+					</ul>
+					<a href="blog.php" class="load">Load More</a>
 				</div>
 				<div class="sidebar">
 					<h1>Recent Posts</h1>
